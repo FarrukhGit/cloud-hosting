@@ -5,6 +5,12 @@
     --color-headings: #1b0760;
     --color-body:#918ca4;
 }
+
+*. *::after, *::before {
+    box-sizing: border-box;
+}
+
+
 /* Typography */
 
 html {
@@ -141,4 +147,57 @@ text-decoration: none;
     .list--tick .list__item {
         padding-left: 0;
     }
+}
+
+/* Buttons */
+.btn {
+    font-size: 1.8rem;
+    font-weight: 600; 
+    color: #fff;
+    text-transform: uppercase;
+    padding: 2rem 3rem;
+    text-align: center;
+    margin: 1rem 0;
+    border: 0;
+    border-radius: 40px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn--primary {
+    background: var(--color-primary);
+    color: lighten(primary, 10%);
+}
+
+.btn--primary:hover {
+    background: #3a8ffd;
+}
+
+.btn--secondary {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+.btn--secondary:hover {
+    background: #00c8eb;
+}
+
+.btn--accent {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.btn--accent:hover {
+    background: #ec3000;
+}
+
+.btn--block {
+    width: 15rem;
+    display: inline-block;
+}
+
+@media screen and (min-width: 1024px) {
+.btn {
+    font-size: 1.5rem;
+}
 }
